@@ -1,0 +1,68 @@
+﻿@model List<Index.Models.Tbl_NotasEstudiante>
+@{
+    ViewBag.Title = "Estudiante";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Estudiante</h2>
+
+<table class="table table-hover">
+    <thead>
+    <th>
+        Nombre
+
+    </th>
+    <th>
+        Laboratorio1
+
+    </th>
+
+    <th>
+        Parcial1
+
+    </th>
+
+    <th>
+        Laboratorio2
+
+    </th>
+
+    <th>
+        Parcial2
+
+    </th>
+
+    <th>
+        Laboratorio3
+
+    </th>
+
+    <th>
+        Parcial3
+
+    </th>
+
+    </thead>
+
+    <tbody>
+
+        @foreach (var item in Model)
+        {
+
+            <tr>
+                <td>@item.id_estudiante</td>
+                <td>@item.Laboratorio1</td>
+                <td>@item.Parcial1</td>
+                <td>@item.Laboratorio2</td>
+                <td>@item.Parcial2</td>
+                <td>@item.Laboratorio3</td>
+                <td>@item.Parcial3</td>
+                <td>
+                    @Html.ActionLink("Eliminar", "Delete", new { id = item.id_estudiante }, new { @class = "btn btn-danger" })
+                </td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>

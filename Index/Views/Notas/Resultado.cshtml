@@ -1,0 +1,30 @@
+﻿@model List<Index.Models.Tbl_NotasEstudiante>
+@{
+    ViewBag.Title = "Resultado";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>Resultado</h2>
+
+
+@using (Html.BeginForm("Estudiante", "Notas", FormMethod.Post))
+{
+    <br />
+    <label>Estudiante</label>
+    <h4>@ViewBag.nombre</h4>
+    <br />
+    <label>Primer Periodo</label>
+    <h4>@ViewBag.total1</h4>
+    <br />
+    <label>Segundo Periodo</label>
+    <h4>@ViewBag.total2</h4>
+    <br />
+    <label>Tercer Periodo</label>
+    <h4>@ViewBag.total3</h4>
+    <br />
+    <label>Nota Global</label>
+    <h4>@ViewBag.total</h4>
+
+    <input type="submit">
+}
